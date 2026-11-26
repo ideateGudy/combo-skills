@@ -14,7 +14,7 @@ for (const s of skills) {
   if (!SKILL_DIRS.includes(s.dirPlatform)) errors.push(`${where}: unknown platform folder`);
   if (s.meta.name !== s.name) errors.push(`${where}: frontmatter name "${s.meta.name}" must equal folder name`);
   if (s.meta.platform !== s.dirPlatform) errors.push(`${where}: frontmatter platform "${s.meta.platform}" must equal folder "${s.dirPlatform}"`);
-  if (!s.name.startsWith(s.dirPlatform + "-")) errors.push(`${where}: name must start with "${s.dirPlatform}-"`);
+  if (s.name !== "combo-skills" && !s.name.startsWith(s.dirPlatform + "-")) errors.push(`${where}: name must start with "${s.dirPlatform}-"`);
   if (!s.meta.description) errors.push(`${where}: missing description`);
   else if (s.meta.description.length > 400) warns.push(`${where}: description is ${s.meta.description.length} chars (keep < 300)`);
   if (!s.sections.length) warns.push(`${where}: no sections declared`);

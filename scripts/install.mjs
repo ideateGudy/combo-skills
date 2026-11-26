@@ -88,6 +88,10 @@ if (o.baseline) {
     copyFile(path.join(ROOT, "rules", f), path.join(agentDir, "rules", f), { overwrite: true });
   }
   copyFile(path.join(ROOT, "platforms", `${o.platform}.md`), path.join(agentDir, "rules", `platform-${o.platform}.md`), { overwrite: true });
+  const hubSrc = path.join(ROOT, "skills", "shared", "combo-skills", "SKILL.md");
+  if (fs.existsSync(hubSrc)) {
+    copyFile(hubSrc, path.join(agentDir, "skills", "combo-skills", "SKILL.md"), { overwrite: true });
+  }
 
   const gi = path.join(target, ".gitignore");
   const line = `${AGENT_DIR}/.skills-source/`;
