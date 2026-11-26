@@ -22,6 +22,12 @@ Open your project folder in Antigravity and tell the agent:
 Use https://github.com/<you>/skillstack to build: <what you want>. Platform: web|mobile|desktop|backend.
 ```
 
+Or on an **existing project** to improve its architecture and design:
+
+```
+Use https://github.com/<you>/skillstack and run /analyse (or /audit, /design) on this project.
+```
+
 The agent clones it into `.agent/.skills-source/`, installs the baseline rules, then installs skills
 just-in-time per section.
 

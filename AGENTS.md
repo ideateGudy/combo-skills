@@ -37,3 +37,9 @@ git -C .agent/.skills-source pull
 node .agent/.skills-source/scripts/install.mjs --list --platform <p>
 node .agent/.skills-source/scripts/install.mjs --platform <p> --skills <name> --section "<section>" --target .
 ```
+
+## Commands (new or existing projects)
+When the user invokes a command, install and follow the matching skill:
+- **`/analyse`** (or `/analyze`): install `shared-project-audit` — inspect the existing repo read-only (stack, architecture, bottlenecks) and report findings before editing.
+- **`/audit`**: install `shared-project-audit` — audit architecture, security, performance, a11y, and `DESIGN.md` compliance, then write a section-by-section fix plan to `.agent/ACTIVE_SKILLS.md`.
+- **`/design`**: install `shared-redesign-and-refactor` — fill/update `DESIGN.md` Design Brief and upgrade UI/UX, tokens, and component architecture section-by-section.

@@ -38,9 +38,11 @@ Follow the protocol in `SKILLS.md` section "Selection protocol". Write the plan 
 node .agent/.skills-source/scripts/install.mjs --platform <platform> --skills <a,b> --section "<section>" --target .
 ```
 
-## 6. Build
+## 6. Build (or improve an existing project)
 
-Build one section at a time using only the skills installed for that section. Run the quality gates
-(`.agent/rules/02-quality-gates.md`) before moving on.
+- **New project**: build one section at a time using only the skills installed for that section.
+- **Existing project**: run `/analyse` or `/audit` (`shared-project-audit`) first to map the codebase and log a fix plan in `.agent/ACTIVE_SKILLS.md`, then use `/design` (`shared-redesign-and-refactor`) and section skills to upgrade one section at a time.
+
+Run the quality gates (`.agent/rules/02-quality-gates.md`) before moving on.
 
 Never install the whole library. Never use skills from another platform.
