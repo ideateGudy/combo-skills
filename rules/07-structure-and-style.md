@@ -8,3 +8,5 @@
 - Comments explain *why*, not *what*. No commented-out code.
 - Formatter + linter configured (Biome or ESLint + Prettier) and run before every commit.
 - Document non-obvious decisions in `docs/decisions.md` (3 lines each).
+- **Simplicity first**: never write 100 lines when 5 clear lines or a standard-library primitive (`Set`, `Map`, `Intl`, `URLSearchParams`, `structuredClone`) does it better. No premature abstractions.
+- **Pick the right data structure**: match each section to the simplest structure with the right complexity (e.g. `Map`/`Set` for $O(1)$ lookup instead of nested `.find()` loops, cursor pagination instead of `OFFSET`).
