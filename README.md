@@ -16,20 +16,35 @@ Instead of loading every skill into the agent's context, the agent:
 
 ## Use it (Antigravity)
 
+### New project
 Open your project folder in Antigravity and tell the agent:
 
-```
-Use https://github.com/<you>/skillstack to build: <what you want>. Platform: web|mobile|desktop|backend.
-```
-
-Or on an **existing project** to improve its architecture and design:
-
-```
-Use https://github.com/<you>/skillstack and run /analyse (or /audit, /design) on this project.
+```text
+Use https://github.com/ideateGudy/combo-skills to build: <what you want>. Platform: web|mobile|desktop|backend.
 ```
 
-The agent clones it into `.agent/.skills-source/`, installs the baseline rules, then installs skills
-just-in-time per section.
+*(For full-stack web or mobile + backend, add `with --allow-cross backend`.)*
+
+### Existing project (improve architecture & design)
+Open your existing project folder in Antigravity and tell the agent:
+
+```text
+Use https://github.com/ideateGudy/combo-skills and run /analyse on this project.
+```
+
+Available commands:
+- `/analyse` — read-only stack, module map, and performance/complexity hotspot report
+- `/audit` — full architecture, security, performance, a11y, and `DESIGN.md` compliance audit + fix plan
+- `/design` — fill/update `DESIGN.md` and upgrade UI/UX, tokens, and architecture section-by-section
+
+The agent clones this repo into `.agent/.skills-source/`, installs the baseline rules (never overwriting an existing `DESIGN.md`), and installs skills just-in-time per section.
+
+### Manual install (optional)
+```bash
+git clone --depth 1 https://github.com/ideateGudy/combo-skills.git .agent/.skills-source
+node .agent/.skills-source/scripts/install.mjs --platform web --baseline --target .
+node .agent/.skills-source/scripts/install.mjs --platform web --skills web-nextjs,shared-typescript --section "app" --target .
+```
 
 ## Repository layout
 
@@ -57,8 +72,7 @@ node scripts/install.mjs --target ../my-app --remove web-seo-metadata
 node scripts/validate.mjs        # lint skills + regenerate registry.json
 ```
 
-Platform firewall: a `web` project can only install `web-*` and `shared-*` skills. A desktop app with a web UI
-may opt in with `--allow-cross web`.
+Platform firewall: a `web` project can only install `web-*` and `shared-*` skills (`backend` only `backend-*` and `shared-*`, etc.). Full-stack or hybrid apps may opt in with `--allow-cross <platform>` (e.g. `--allow-cross backend` or `--allow-cross web`).
 
 ## Add a skill
 
