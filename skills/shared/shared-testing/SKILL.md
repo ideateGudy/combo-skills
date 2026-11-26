@@ -19,7 +19,9 @@ requires: []
 |---|---|---|
 | Web | Vitest + Testing Library | Playwright (chromium + webkit, mobile viewport project) |
 | Desktop (Tauri/Electron UI) | Vitest + Testing Library | Playwright (Electron supported) / WebdriverIO (Tauri) |
-| Mobile | Jest (`jest-expo`) + React Native Testing Library | Maestro flows (`maestro test flows/`) |
+| Mobile (Expo/RN) | Jest (`jest-expo`) + React Native Testing Library | Maestro flows (`maestro test flows/`) |
+| Mobile (Flutter) | `flutter_test` (unit + widget tests) | `integration_test` / Patrol |
+| Backend (NestJS/Express) | Vitest or Jest + `supertest` (HTTP + DB integration) | Critical API flow specs against test DB |
 
 ## Rules
 - Test behavior a user can observe; query by role/label, not by class or test id (test id only as last resort).

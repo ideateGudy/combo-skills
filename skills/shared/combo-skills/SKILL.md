@@ -20,7 +20,7 @@ Routes `/combo-skills <command> [target]` to the right section-scoped workflow a
 | `analyse [full project \| <section>]` | Alias `analyze`. Install & run `shared-project-audit` in **read-only** Mode 1 (stack, module map, complexity/perf hotspots). | Whole repo or named section |
 | `audit [full project \| <section>]` | Install & run `shared-project-audit` in Mode 2 (architecture, security, perf, a11y, `DESIGN.md` compliance) and log a section fix plan in `.agent/ACTIVE_SKILLS.md`. | Whole repo or named section |
 | `design [full project \| <section>]` | Install & run `shared-redesign-and-refactor` + `shared-design-tokens`. Lock `DESIGN.md` Brief and upgrade UI/UX, tokens, and architecture section-by-section. | `full project` runs the section loop across every section sequentially |
-| `build <description>` | Decompose into sections in `.agent/ACTIVE_SKILLS.md`, install 1–2 skills per section, build, verify, and commit per section. | New feature or project |
+| `build <description>` | Decompose into sections in `.agent/ACTIVE_SKILLS.md`, install 1–2 skills per section (pair with `shared-testing` for logic/flows), build + write comprehensive tests, verify, and commit per section. | New feature or project |
 | `list` | Run `node .agent/.skills-source/scripts/install.mjs --list --platform <p>` and show available skills. | Current platform |
 | `install <a,b> --section <name>` | Install the requested skills into `.agent/skills/` for `<name>` (respecting platform firewall). | Named section |
 
