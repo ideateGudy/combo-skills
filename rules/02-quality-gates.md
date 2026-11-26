@@ -1,7 +1,8 @@
 # 02 - Quality Gates (Definition of Done per section)
 
 **All platforms**
-- [ ] Typecheck, lint and production build pass with zero errors
+- [ ] Typecheck, lint, test suite, and production build pass with zero errors
+- [ ] Comprehensive tests written for the section (unit + component/integration for logic, edge cases, loading/empty/error states; E2E for critical flows)
 - [ ] No console errors or warnings at runtime
 - [ ] No hard-coded colors/sizes/spacing (tokens only)
 - [ ] All states handled: loading, empty, error, success
