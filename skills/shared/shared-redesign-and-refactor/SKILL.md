@@ -12,8 +12,12 @@ requires: [shared-design-tokens]
 Use this skill to transform an existing codebase's **design** and **architecture** incrementally without breaking working features.
 
 ## When to use
-- User invokes `/design` or asks to improve/modernize an existing app's UI, UX, or architecture.
+- User invokes `/design`, `/design <section>`, or `/design full project`, or asks to improve/modernize an existing app's UI, UX, or architecture.
 - Migrating ad-hoc styles and tangled components onto `DESIGN.md` tokens and clean section boundaries.
+
+## Scope handling (`/design full project` vs `/design <section>`)
+- **`/design <section>`**: lock `DESIGN.md` Brief, centralize tokens if missing, upgrade and verify that section.
+- **`/design full project`**: lock `DESIGN.md` Brief once, decompose the entire app into sections in `.agent/ACTIVE_SKILLS.md` (starting with `tokens` & `layout/navigation`), then execute **Steps 2–5 sequentially for every section** (installing 1–2 relevant skills per section, verifying, logging, and committing each section) until the full project is upgraded.
 
 ## When NOT to use
 - Before understanding the existing app (run `shared-project-audit` `/analyse` first if unfamiliar).

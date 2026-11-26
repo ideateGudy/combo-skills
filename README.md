@@ -32,10 +32,10 @@ Open your existing project folder in Antigravity and tell the agent:
 Use https://github.com/ideateGudy/combo-skills and run /analyse on this project.
 ```
 
-Available commands:
-- `/analyse` — read-only stack, module map, and performance/complexity hotspot report
-- `/audit` — full architecture, security, performance, a11y, and `DESIGN.md` compliance audit + fix plan
-- `/design` — fill/update `DESIGN.md` and upgrade UI/UX, tokens, and architecture section-by-section
+Available commands (append `full project` or a `<section>` name):
+- `/analyse [full project | <section>]` — read-only stack, module map, and performance/complexity hotspot report
+- `/audit [full project | <section>]` — full architecture, security, performance, a11y, and `DESIGN.md` compliance audit + fix plan
+- `/design [full project | <section>]` — fill/update `DESIGN.md` and upgrade UI/UX, tokens, and architecture section-by-section (e.g. `/design full project`)
 
 The agent clones this repo into `.agent/.skills-source/`, installs the baseline rules (never overwriting an existing `DESIGN.md`), and installs skills just-in-time per section.
 
