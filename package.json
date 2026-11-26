@@ -1,0 +1,12 @@
+{
+  "name": "skillstack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Section-scoped skill library for AI coding agents",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "list": "node scripts/install.mjs --list"
+  }
+}
