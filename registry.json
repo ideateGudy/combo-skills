@@ -1,0 +1,405 @@
+{
+  "skills": [
+    {
+      "name": "desktop-electron-shell",
+      "platform": "desktop",
+      "description": "Secure Electron app shell - main/preload/renderer split, contextBridge IPC, validation, windows and tooling (electron-vite). Use when Node.js native modules or the Node ecosystem are required. Prefer Tauri when footprint matters.",
+      "sections": [
+        "app-shell",
+        "ipc",
+        "native-commands",
+        "windows"
+      ],
+      "tags": [
+        "electron",
+        "ipc",
+        "contextbridge",
+        "electron-vite",
+        "security"
+      ],
+      "requires": [],
+      "path": "skills/desktop/desktop-electron-shell"
+    },
+    {
+      "name": "desktop-native-menus-shortcuts",
+      "platform": "desktop",
+      "description": "Native menu bar, tray icon, keyboard shortcuts and a command palette for desktop apps, with platform conventions (Cmd vs Ctrl). Use for any real desktop application.",
+      "sections": [
+        "menus",
+        "tray",
+        "shortcuts",
+        "command-palette"
+      ],
+      "tags": [
+        "menu",
+        "tray",
+        "shortcuts",
+        "accelerators",
+        "command-palette"
+      ],
+      "requires": [],
+      "path": "skills/desktop/desktop-native-menus-shortcuts"
+    },
+    {
+      "name": "desktop-packaging-updates",
+      "platform": "desktop",
+      "description": "Build, sign, notarize, package and auto-update desktop apps with a CI release matrix (Tauri bundler or electron-builder). Use when shipping to users.",
+      "sections": [
+        "packaging",
+        "signing",
+        "auto-update",
+        "release"
+      ],
+      "tags": [
+        "installer",
+        "code-signing",
+        "notarization",
+        "updater",
+        "github-actions"
+      ],
+      "requires": [],
+      "path": "skills/desktop/desktop-packaging-updates"
+    },
+    {
+      "name": "desktop-tauri-shell",
+      "platform": "desktop",
+      "description": "Tauri 2 app shell - project setup, window config, Rust commands via invoke, capabilities (least privilege), CSP and sidecars. Use for small, fast desktop apps. Not when the main process needs the Node ecosystem (use desktop-electron-shell).",
+      "sections": [
+        "app-shell",
+        "native-commands",
+        "filesystem",
+        "windows"
+      ],
+      "tags": [
+        "tauri",
+        "rust",
+        "desktop",
+        "ipc",
+        "capabilities"
+      ],
+      "requires": [],
+      "path": "skills/desktop/desktop-tauri-shell"
+    },
+    {
+      "name": "mobile-expo-scaffold",
+      "platform": "mobile",
+      "description": "Scaffold a React Native app with Expo, Expo Router, TypeScript and EAS. Use once at the start of a mobile project. Not for existing apps or bare native projects.",
+      "sections": [
+        "setup"
+      ],
+      "tags": [
+        "expo",
+        "react-native",
+        "expo-router",
+        "typescript",
+        "eas"
+      ],
+      "requires": [],
+      "path": "skills/mobile/mobile-expo-scaffold"
+    },
+    {
+      "name": "mobile-navigation",
+      "platform": "mobile",
+      "description": "Navigation with Expo Router - stacks, tabs, modals/sheets, deep links and auth gating. Use for any multi-screen mobile app.",
+      "sections": [
+        "navigation",
+        "routing",
+        "auth-gating",
+        "deep-links"
+      ],
+      "tags": [
+        "expo-router",
+        "navigation",
+        "deep-links",
+        "tabs"
+      ],
+      "requires": [],
+      "path": "skills/mobile/mobile-navigation"
+    },
+    {
+      "name": "mobile-offline-storage",
+      "platform": "mobile",
+      "description": "Local persistence and offline support for React Native - MMKV, expo-sqlite, TanStack Query cache persistence, secure storage and a sync queue. Use when the app must work offline or cache data.",
+      "sections": [
+        "persistence",
+        "offline",
+        "caching",
+        "sync"
+      ],
+      "tags": [
+        "mmkv",
+        "sqlite",
+        "offline-first",
+        "tanstack-query",
+        "secure-store"
+      ],
+      "requires": [],
+      "path": "skills/mobile/mobile-offline-storage"
+    },
+    {
+      "name": "mobile-reanimated-gestures",
+      "platform": "mobile",
+      "description": "60fps UI-thread animation and gestures with react-native-reanimated and gesture-handler - sheets, swipe, drag, shared transitions. Use for gestures or complex animation. Not for simple fades handled by built-ins.",
+      "sections": [
+        "gestures",
+        "transitions",
+        "bottom-sheet",
+        "swipe",
+        "drag"
+      ],
+      "tags": [
+        "reanimated",
+        "gesture-handler",
+        "animation",
+        "worklets"
+      ],
+      "requires": [],
+      "path": "skills/mobile/mobile-reanimated-gestures"
+    },
+    {
+      "name": "shared-api-client",
+      "platform": "shared",
+      "description": "Typed API client with zod parsing at the boundary, a consistent error model, retries, auth token handling and TanStack Query hooks. Use when the app talks to an HTTP API.",
+      "sections": [
+        "data-layer",
+        "api",
+        "networking"
+      ],
+      "tags": [
+        "api",
+        "fetch",
+        "zod",
+        "tanstack-query",
+        "errors"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-api-client"
+    },
+    {
+      "name": "shared-design-tokens",
+      "platform": "shared",
+      "description": "Create the single source of design tokens (color, type, spacing, radius, shadow, motion) with semantic layers and dark mode, exported as CSS variables (web/desktop) or a theme object (mobile). Use at the start of any UI project.",
+      "sections": [
+        "design-system",
+        "foundation",
+        "theming"
+      ],
+      "tags": [
+        "tokens",
+        "theme",
+        "css-variables",
+        "dark-mode"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-design-tokens"
+    },
+    {
+      "name": "shared-state-management",
+      "platform": "shared",
+      "description": "Decide where state lives - server cache (TanStack Query), client state (Zustand), URL state and local component state. Use when state crosses sections or screens. Not for trivial local state.",
+      "sections": [
+        "state",
+        "architecture"
+      ],
+      "tags": [
+        "zustand",
+        "tanstack-query",
+        "state",
+        "url-state"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-state-management"
+    },
+    {
+      "name": "shared-testing",
+      "platform": "shared",
+      "description": "Testing strategy and setup per platform - Vitest + Playwright (web, desktop UI), Jest + React Native Testing Library + Maestro (mobile). Use for sections with logic, forms or flows. Skip for throwaway prototypes.",
+      "sections": [
+        "testing",
+        "verification",
+        "ci"
+      ],
+      "tags": [
+        "vitest",
+        "playwright",
+        "jest",
+        "maestro",
+        "testing",
+        "ci"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-testing"
+    },
+    {
+      "name": "web-app-scaffold",
+      "platform": "web",
+      "description": "Scaffold a new website or web app - choose framework, create folders, configure TypeScript, lint, tokens and env. Use once at project start. Not for projects that already have a scaffold.",
+      "sections": [
+        "setup"
+      ],
+      "tags": [
+        "nextjs",
+        "vite",
+        "astro",
+        "typescript",
+        "tailwind",
+        "scaffold"
+      ],
+      "requires": [],
+      "path": "skills/web/web-app-scaffold"
+    },
+    {
+      "name": "web-forms-validation",
+      "platform": "web",
+      "description": "Accessible forms with react-hook-form + zod, client and server validation, spam protection and designed states. Use for contact, signup, checkout, newsletter and settings forms.",
+      "sections": [
+        "contact",
+        "signup",
+        "checkout",
+        "newsletter",
+        "settings"
+      ],
+      "tags": [
+        "forms",
+        "zod",
+        "react-hook-form",
+        "validation",
+        "a11y"
+      ],
+      "requires": [],
+      "path": "skills/web/web-forms-validation"
+    },
+    {
+      "name": "web-gsap-scrolltrigger",
+      "platform": "web",
+      "description": "GSAP + ScrollTrigger for scroll-triggered reveals, pinned sections, parallax, horizontal scroll and text splitting. Use for scroll-linked animation that is not video scrubbing. Not for simple CSS transitions.",
+      "sections": [
+        "reveals",
+        "pinned-sections",
+        "parallax",
+        "horizontal-scroll",
+        "text-animation"
+      ],
+      "tags": [
+        "gsap",
+        "scrolltrigger",
+        "animation",
+        "scroll"
+      ],
+      "requires": [],
+      "path": "skills/web/web-gsap-scrolltrigger"
+    },
+    {
+      "name": "web-hero-section",
+      "platform": "web",
+      "description": "Compose the first viewport of a website - headline hierarchy, one primary CTA, supporting media and LCP-safe loading. Use for any hero or above-the-fold section. For scroll-scrubbed hero video also use web-scroll-scrubbed-video.",
+      "sections": [
+        "hero",
+        "above-the-fold"
+      ],
+      "tags": [
+        "hero",
+        "layout",
+        "copy",
+        "lcp"
+      ],
+      "requires": [],
+      "path": "skills/web/web-hero-section"
+    },
+    {
+      "name": "web-image-optimization",
+      "platform": "web",
+      "description": "Optimized images for the web - AVIF/WebP, responsive sizes, LCP priority, blur placeholders, SVG usage. Use for hero images, galleries and cards. Not for video (see scroll-scrubbed-video) or sites with no images.",
+      "sections": [
+        "hero",
+        "gallery",
+        "cards",
+        "media"
+      ],
+      "tags": [
+        "images",
+        "avif",
+        "webp",
+        "lcp",
+        "next-image"
+      ],
+      "requires": [],
+      "path": "skills/web/web-image-optimization"
+    },
+    {
+      "name": "web-responsive-layout",
+      "platform": "web",
+      "description": "Mobile-first responsive layout system - container, grid, fluid type, spacing and breakpoints. Use when building or fixing page layout at any size. Not needed for single fixed-size components.",
+      "sections": [
+        "layout",
+        "grid",
+        "navigation",
+        "any"
+      ],
+      "tags": [
+        "css",
+        "responsive",
+        "grid",
+        "tailwind"
+      ],
+      "requires": [],
+      "path": "skills/web/web-responsive-layout"
+    },
+    {
+      "name": "web-scroll-scrubbed-video",
+      "platform": "web",
+      "description": "Scroll-scrubbed video driven bidirectionally by GSAP ScrollTrigger, with FFmpeg all-intra (every frame a keyframe) encoding. Use for hero or showcase sections where scrolling up and down must play video frame-by-frame. Not for autoplay or looping background video.",
+      "sections": [
+        "hero",
+        "showcase",
+        "storytelling",
+        "product-reveal"
+      ],
+      "tags": [
+        "gsap",
+        "scrolltrigger",
+        "ffmpeg",
+        "video",
+        "scroll",
+        "all-intra"
+      ],
+      "requires": [],
+      "path": "skills/web/web-scroll-scrubbed-video"
+    },
+    {
+      "name": "web-seo-metadata",
+      "platform": "web",
+      "description": "SEO and metadata for public websites - titles, descriptions, Open Graph, JSON-LD, sitemap, robots, semantic headings. Use for marketing and content sites. Not for internal tools behind login.",
+      "sections": [
+        "head",
+        "seo",
+        "sitemap"
+      ],
+      "tags": [
+        "seo",
+        "metadata",
+        "open-graph",
+        "json-ld",
+        "sitemap"
+      ],
+      "requires": [],
+      "path": "skills/web/web-seo-metadata"
+    },
+    {
+      "name": "web-smooth-scroll-lenis",
+      "platform": "web",
+      "description": "Site-wide smooth scrolling with Lenis, synced to GSAP ScrollTrigger. Use when the user wants an inertial, premium scroll feel. Not for docs/accessibility-first sites or pages with many nested scroll containers.",
+      "sections": [
+        "global-scroll",
+        "layout"
+      ],
+      "tags": [
+        "lenis",
+        "smooth-scroll",
+        "gsap"
+      ],
+      "requires": [],
+      "path": "skills/web/web-smooth-scroll-lenis"
+    }
+  ]
+}
