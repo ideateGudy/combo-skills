@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 // Antigravity workspace folder. Change here if your IDE version uses another folder.
 export const AGENT_DIR = ".agent";
-export const PLATFORMS = ["web", "mobile", "desktop"];
+export const PLATFORMS = ["web", "mobile", "desktop", "backend"];
 export const SKILL_DIRS = [...PLATFORMS, "shared"];
 
 export function parseFrontmatter(text) {

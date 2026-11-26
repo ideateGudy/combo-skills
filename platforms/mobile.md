@@ -1,6 +1,6 @@
 # Platform: MOBILE
 
-**Default stack**: React Native with Expo (SDK latest), Expo Router, TypeScript strict, EAS for builds.
+**Default stack**: React Native with Expo (SDK latest), Expo Router, TypeScript strict, EAS for builds — OR **Flutter 3 + Dart 3** (Riverpod/BLoC, GoRouter, sound null safety). Pick once, record it in `docs/decisions.md`.
 Use bare React Native only if a required native module is unavailable in Expo.
 
 **Folders**

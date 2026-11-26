@@ -13,7 +13,7 @@ If `.agent/.skills-source` already exists, run `git -C .agent/.skills-source pul
 ## 2. Establish the platform and the brief
 
 From the user's message determine:
-- **platform**: `web` | `mobile` | `desktop` (ask ONE short question if unclear)
+- **platform**: `web` | `mobile` | `desktop` | `backend` (ask ONE short question if unclear)
 - **what is being built** (one paragraph)
 
 ## 3. Install the baseline (rules only, zero skills yet)
