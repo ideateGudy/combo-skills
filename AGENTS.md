@@ -39,7 +39,7 @@ node .agent/.skills-source/scripts/install.mjs --platform <p> --skills <name> --
 ```
 
 ## Commands (new or existing projects)
-When the user invokes a command (optionally scoped with `full project` or `<section>`), install and follow the matching skill:
-- **`/analyse [full project | <section>]`** (or `/analyze`): install `shared-project-audit` — inspect the target read-only (stack, architecture, bottlenecks) and report findings before editing.
-- **`/audit [full project | <section>]`**: install `shared-project-audit` — audit architecture, security, performance, a11y, and `DESIGN.md` compliance, then write a section-by-section fix plan to `.agent/ACTIVE_SKILLS.md`.
-- **`/design [full project | <section>]`**: install `shared-redesign-and-refactor` — fill/update `DESIGN.md` Design Brief and upgrade UI/UX, tokens, and component architecture. With **`full project`**, list all sections in `.agent/ACTIVE_SKILLS.md` and run the section loop across every section sequentially until the entire project is upgraded.
+Baseline installs `/combo-skills` (`.agent/skills/combo-skills/SKILL.md`) so it autocompletes in chat. When the user invokes `/combo-skills <cmd>` (or `<cmd>` directly, optionally scoped with `full project` or `<section>`), install and follow the matching skill:
+- **`/combo-skills analyse [full project | <section>]`** (or `/analyse`, `/analyze`): install `shared-project-audit` — inspect the target read-only (stack, architecture, bottlenecks) and report findings before editing.
+- **`/combo-skills audit [full project | <section>]`** (or `/audit`): install `shared-project-audit` — audit architecture, security, performance, a11y, and `DESIGN.md` compliance, then write a section-by-section fix plan to `.agent/ACTIVE_SKILLS.md`.
+- **`/combo-skills design [full project | <section>]`** (or `/design`): install `shared-redesign-and-refactor` — fill/update `DESIGN.md` Design Brief and upgrade UI/UX, tokens, and component architecture. With **`full project`**, list all sections in `.agent/ACTIVE_SKILLS.md` and run the section loop across every section sequentially until the entire project is upgraded.

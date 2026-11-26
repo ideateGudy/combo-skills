@@ -266,6 +266,25 @@
       "path": "skills/mobile/mobile-reanimated-gestures"
     },
     {
+      "name": "combo-skills",
+      "platform": "shared",
+      "description": "Section-scoped skill router and command hub for building new apps or upgrading existing projects. Use when the user invokes /combo-skills (analyse, audit, design, build, list, install).",
+      "sections": [
+        "workflow",
+        "audit",
+        "design",
+        "build"
+      ],
+      "tags": [
+        "router",
+        "commands",
+        "slash-command",
+        "workflow"
+      ],
+      "requires": [],
+      "path": "skills/shared/combo-skills"
+    },
+    {
       "name": "shared-api-client",
       "platform": "shared",
       "description": "Typed API client with zod parsing at the boundary, a consistent error model, retries, auth token handling and TanStack Query hooks. Use when the app talks to an HTTP API.",

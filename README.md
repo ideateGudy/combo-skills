@@ -29,13 +29,14 @@ Use https://github.com/ideateGudy/combo-skills to build: <what you want>. Platfo
 Open your existing project folder in Antigravity and tell the agent:
 
 ```text
-Use https://github.com/ideateGudy/combo-skills and run /analyse on this project.
+Use https://github.com/ideateGudy/combo-skills and run /combo-skills analyse
 ```
 
-Available commands (append `full project` or a `<section>` name):
-- `/analyse [full project | <section>]` — read-only stack, module map, and performance/complexity hotspot report
-- `/audit [full project | <section>]` — full architecture, security, performance, a11y, and `DESIGN.md` compliance audit + fix plan
-- `/design [full project | <section>]` — fill/update `DESIGN.md` and upgrade UI/UX, tokens, and architecture section-by-section (e.g. `/design full project`)
+Once baseline is installed, `/combo-skills` autocompletes in the chat box. Available subcommands (append `full project` or a `<section>` name):
+- `/combo-skills analyse [full project | <section>]` — read-only stack, module map, and performance/complexity hotspot report
+- `/combo-skills audit [full project | <section>]` — full architecture, security, performance, a11y, and `DESIGN.md` compliance audit + fix plan
+- `/combo-skills design [full project | <section>]` — fill/update `DESIGN.md` and upgrade UI/UX, tokens, and architecture section-by-section (e.g. `/combo-skills design full project`)
+- `/combo-skills list` — list available skills for the project's platform
 
 The agent clones this repo into `.agent/.skills-source/`, installs the baseline rules (never overwriting an existing `DESIGN.md`), and installs skills just-in-time per section.
 

@@ -77,6 +77,7 @@ If nothing matches, state "no skill matched" and use the rules only.
 ### shared
 | Skill | Use for sections | Pick when | Don't use when |
 |---|---|---|---|
+| combo-skills | workflow, audit, design, build | `/combo-skills` slash-command router installed with `--baseline` | - |
 | shared-typescript | typescript, types, validation, architecture | configuring strict TS, discriminated unions, Zod parsing | non-TS or Dart/Flutter projects |
 | shared-design-tokens | design system foundation | start of any UI project | tokens already exist |
 | shared-api-client | data layer | app talks to an HTTP API | no backend |
