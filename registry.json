@@ -325,6 +325,50 @@
       "path": "skills/shared/shared-dsa-and-simplicity"
     },
     {
+      "name": "shared-project-audit",
+      "platform": "shared",
+      "description": "Analyze and audit an existing codebase for architecture, performance, security, accessibility, and DESIGN.md compliance. Triggered by /analyse, /analyze, or /audit on existing projects before making changes.",
+      "sections": [
+        "audit",
+        "analysis",
+        "architecture",
+        "refactoring"
+      ],
+      "tags": [
+        "analyse",
+        "audit",
+        "architecture",
+        "code-review",
+        "existing-project"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-project-audit"
+    },
+    {
+      "name": "shared-redesign-and-refactor",
+      "platform": "shared",
+      "description": "Upgrade an existing project's UI/UX design system and architecture section-by-section. Triggered by /design or requests to redesign, polish, or simplify an existing app without regressions.",
+      "sections": [
+        "design",
+        "redesign",
+        "refactoring",
+        "polish",
+        "ui"
+      ],
+      "tags": [
+        "design",
+        "redesign",
+        "refactor",
+        "tokens",
+        "simplify",
+        "existing-project"
+      ],
+      "requires": [
+        "shared-design-tokens"
+      ],
+      "path": "skills/shared/shared-redesign-and-refactor"
+    },
+    {
       "name": "shared-state-management",
       "platform": "shared",
       "description": "Decide where state lives - server cache (TanStack Query), client state (Zustand), URL state and local component state. Use when state crosses sections or screens. Not for trivial local state.",

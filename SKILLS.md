@@ -83,6 +83,8 @@ If nothing matches, state "no skill matched" and use the rules only.
 | shared-state-management | state | cross-section client state or server cache | trivial local state |
 | shared-testing | verification | any section with logic, forms, flows | throwaway prototype |
 | shared-dsa-and-simplicity | architecture, search, caching, navigation, state, performance | choosing the simplest data structure/algorithm per section, avoiding $O(n^2)$ or over-engineering | trivial 1-to-1 CRUD |
+| shared-project-audit | audit, analysis, architecture, refactoring | `/analyse` or `/audit` on an existing codebase before making changes | greenfield project with no code |
+| shared-redesign-and-refactor | design, redesign, refactoring, polish, ui | `/design` to upgrade an existing app's UI/UX, tokens, and architecture section-by-section | before auditing an unfamiliar repo |
 
 ## 4. Skill authoring rules
 - `SKILL.md` has frontmatter: `name`, `description`, `platform`, `sections`, `tags`, `requires`.
