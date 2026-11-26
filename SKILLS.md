@@ -7,9 +7,10 @@ worse output.
 ## 1. Platform firewall
 | Project platform | Allowed skill prefixes |
 |---|---|
-| web | `web-*`, `shared-*` |
-| mobile | `mobile-*`, `shared-*` |
-| desktop | `desktop-*`, `shared-*` (add `web-*` only with user approval via `--allow-cross web`) |
+| web | `web-*`, `shared-*` (add `backend-*` for full-stack via `--allow-cross backend`) |
+| mobile | `mobile-*`, `shared-*` (add `backend-*` for full-stack via `--allow-cross backend`) |
+| desktop | `desktop-*`, `shared-*` (add `web-*` or `backend-*` only with user approval via `--allow-cross`) |
+| backend | `backend-*`, `shared-*` |
 
 Hard bans: DOM libraries (GSAP, Lenis, CSS scroll tricks) in mobile projects. Node-only APIs in the web
 renderer. Mobile gesture libs in web projects.
@@ -37,6 +38,8 @@ If nothing matches, state "no skill matched" and use the rules only.
 | Skill | Use for sections | Pick when | Don't use when |
 |---|---|---|---|
 | web-app-scaffold | project setup | starting a new site/app, choosing framework and folders | project already scaffolded |
+| web-react | ui, components, state, performance | building React UIs, compound components, fixing waterfalls/re-renders | non-React static sites |
+| web-nextjs | routing, app-router, data-fetching, seo, api | Next.js App Router, RSC boundaries, streaming, Server Actions | pure client-side Vite/SPA |
 | web-scroll-scrubbed-video | hero, showcase, storytelling | video must play forward AND backward with scroll (GSAP + FFmpeg all-intra) | video should just autoplay/loop, or user needs a background loop |
 | web-gsap-scrolltrigger | reveals, pinned sections, parallax, horizontal scroll | scroll-linked or scroll-triggered animation that is not video scrubbing | simple CSS hover/fade is enough |
 | web-smooth-scroll-lenis | global scroll feel | user wants smooth/inertial scrolling site-wide | heavy native scroll containers, accessibility-first docs sites |
@@ -50,6 +53,7 @@ If nothing matches, state "no skill matched" and use the rules only.
 | Skill | Use for sections | Pick when | Don't use when |
 |---|---|---|---|
 | mobile-expo-scaffold | project setup | new React Native app | already scaffolded or bare native project |
+| mobile-flutter-dart | project setup, ui, navigation, state, testing | building a Flutter 3 / Dart 3 mobile app | React Native / Expo projects |
 | mobile-navigation | routing, tabs, modals, deep links, auth gating | multi-screen app | single-screen app |
 | mobile-reanimated-gestures | transitions, sheets, swipe, drag | gestures or 60fps animations | simple opacity/scale handled by built-ins |
 | mobile-offline-storage | persistence, caching, sync | offline use, local DB, cached lists | pure online, no persistence needed |
@@ -62,9 +66,18 @@ If nothing matches, state "no skill matched" and use the rules only.
 | desktop-native-menus-shortcuts | menu bar, tray, shortcuts, command palette | any real desktop app | - |
 | desktop-packaging-updates | installers, signing, auto-update, CI release | shipping to users | prototype only |
 
+### backend
+| Skill | Use for sections | Pick when | Don't use when |
+|---|---|---|---|
+| backend-nestjs | architecture, api, validation, auth, testing | structured modular Node/TS backend with DI | lightweight REST/BFF (use backend-express) |
+| backend-express | architecture, api, validation, security | lightweight Express TypeScript REST API or BFF | large modular app needing DI (use backend-nestjs) |
+| backend-postgresql | database, schema, migrations, performance | relational SQL schema, indexing, migrations, query tuning | NoSQL document store (use backend-mongodb) |
+| backend-mongodb | database, schema, performance, queries | MongoDB collections, ESR indexes, aggregation pipelines | relational SQL (use backend-postgresql) |
+
 ### shared
 | Skill | Use for sections | Pick when | Don't use when |
 |---|---|---|---|
+| shared-typescript | typescript, types, validation, architecture | configuring strict TS, discriminated unions, Zod parsing | non-TS or Dart/Flutter projects |
 | shared-design-tokens | design system foundation | start of any UI project | tokens already exist |
 | shared-api-client | data layer | app talks to an HTTP API | no backend |
 | shared-state-management | state | cross-section client state or server cache | trivial local state |

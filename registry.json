@@ -1,6 +1,94 @@
 {
   "skills": [
     {
+      "name": "backend-express",
+      "platform": "backend",
+      "description": "Express.js TypeScript API architecture with layered routes/controllers/services, Zod validation, async error middleware, and security headers. Use when building lightweight Node REST APIs or BFFs. Not for NestJS apps.",
+      "sections": [
+        "architecture",
+        "api",
+        "validation",
+        "security"
+      ],
+      "tags": [
+        "express",
+        "nodejs",
+        "typescript",
+        "rest",
+        "zod",
+        "backend"
+      ],
+      "requires": [
+        "shared-typescript"
+      ],
+      "path": "skills/backend/backend-express"
+    },
+    {
+      "name": "backend-mongodb",
+      "platform": "backend",
+      "description": "MongoDB document schema design, ESR indexing, aggregation pipelines, and query optimization. Use when modeling collections, writing aggregations, or tuning MongoDB queries. Not for relational SQL/Postgres.",
+      "sections": [
+        "database",
+        "schema",
+        "performance",
+        "queries"
+      ],
+      "tags": [
+        "mongodb",
+        "nosql",
+        "mongoose",
+        "aggregation",
+        "indexing"
+      ],
+      "requires": [],
+      "path": "skills/backend/backend-mongodb"
+    },
+    {
+      "name": "backend-nestjs",
+      "platform": "backend",
+      "description": "NestJS modular architecture, dependency injection boundaries, DTO validation, guards/interceptors, and testing. Use when building or refactoring NestJS backend services. Not for Express or frontend apps.",
+      "sections": [
+        "architecture",
+        "api",
+        "validation",
+        "auth",
+        "testing"
+      ],
+      "tags": [
+        "nestjs",
+        "typescript",
+        "modular-monolith",
+        "di",
+        "backend"
+      ],
+      "requires": [
+        "shared-typescript"
+      ],
+      "path": "skills/backend/backend-nestjs"
+    },
+    {
+      "name": "backend-postgresql",
+      "platform": "backend",
+      "description": "PostgreSQL schema design, indexing strategies, query optimization, migrations, and connection pooling. Use when writing SQL, designing Postgres schemas, or tuning slow queries. Not for NoSQL/MongoDB.",
+      "sections": [
+        "database",
+        "schema",
+        "migrations",
+        "performance"
+      ],
+      "tags": [
+        "postgresql",
+        "sql",
+        "indexing",
+        "migrations",
+        "prisma",
+        "drizzle",
+        "neon"
+      ],
+      "requires": [],
+      "path": "skills/backend/backend-postgresql"
+    },
+    {
       "name": "desktop-electron-shell",
       "platform": "desktop",
       "description": "Secure Electron app shell - main/preload/renderer split, contextBridge IPC, validation, windows and tooling (electron-vite). Use when Node.js native modules or the Node ecosystem are required. Prefer Tauri when footprint matters.",
@@ -96,6 +184,27 @@
       ],
       "requires": [],
       "path": "skills/mobile/mobile-expo-scaffold"
+    },
+    {
+      "name": "mobile-flutter-dart",
+      "platform": "mobile",
+      "description": "Flutter 3 and Dart 3 app architecture, Riverpod/BLoC state, GoRouter navigation, const widget composition, and testing. Use when building Flutter mobile apps. Not for React Native/Expo projects.",
+      "sections": [
+        "project-setup",
+        "ui",
+        "navigation",
+        "state",
+        "testing"
+      ],
+      "tags": [
+        "flutter",
+        "dart",
+        "riverpod",
+        "gorouter",
+        "mobile"
+      ],
+      "requires": [],
+      "path": "skills/mobile/mobile-flutter-dart"
     },
     {
       "name": "mobile-navigation",
@@ -231,6 +340,25 @@
       "path": "skills/shared/shared-testing"
     },
     {
+      "name": "shared-typescript",
+      "platform": "shared",
+      "description": "TypeScript strict mode patterns, discriminated unions, unknown narrowing, and Zod boundary validation. Use when configuring tsconfig, typing APIs/state, or eliminating any/unsafe casts. Not for non-TS projects.",
+      "sections": [
+        "typescript",
+        "types",
+        "validation",
+        "architecture"
+      ],
+      "tags": [
+        "typescript",
+        "strict",
+        "zod",
+        "type-safety"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-typescript"
+    },
+    {
       "name": "web-app-scaffold",
       "platform": "web",
       "description": "Scaffold a new website or web app - choose framework, create folders, configure TypeScript, lint, tokens and env. Use once at project start. Not for projects that already have a scaffold.",
@@ -325,6 +453,49 @@
       ],
       "requires": [],
       "path": "skills/web/web-image-optimization"
+    },
+    {
+      "name": "web-nextjs",
+      "platform": "web",
+      "description": "Next.js App Router architecture, Server vs Client Components, streaming, Server Actions, and caching. Use when building Next.js routes, layouts, data fetching, or API handlers. Not for pure client-side SPAs.",
+      "sections": [
+        "routing",
+        "app-router",
+        "data-fetching",
+        "seo",
+        "api"
+      ],
+      "tags": [
+        "nextjs",
+        "app-router",
+        "rsc",
+        "server-actions",
+        "vercel"
+      ],
+      "requires": [
+        "web-react"
+      ],
+      "path": "skills/web/web-nextjs"
+    },
+    {
+      "name": "web-react",
+      "platform": "web",
+      "description": "React 19 component composition, state colocation, and render performance. Use when building React UIs, refactoring prop-heavy components, or fixing waterfalls/re-renders. Not for framework routing (use web-nextjs).",
+      "sections": [
+        "ui",
+        "components",
+        "state",
+        "performance"
+      ],
+      "tags": [
+        "react",
+        "hooks",
+        "composition",
+        "performance",
+        "vercel-agent-skills"
+      ],
+      "requires": [],
+      "path": "skills/web/web-react"
     },
     {
       "name": "web-responsive-layout",
