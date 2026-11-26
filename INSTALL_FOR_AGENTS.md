@@ -41,7 +41,7 @@ node .agent/.skills-source/scripts/install.mjs --platform <platform> --skills <a
 ## 6. Build (or improve an existing project)
 
 - **New project**: build one section at a time using only the skills installed for that section.
-- **Existing project**: run `/analyse` or `/audit` (`shared-project-audit`) first to map the codebase and log a fix plan in `.agent/ACTIVE_SKILLS.md`, then use `/design` (`shared-redesign-and-refactor`) and section skills to upgrade one section at a time.
+- **Existing project**: run `/analyse [full project | <section>]` or `/audit [full project | <section>]` (`shared-project-audit`) first to map the codebase and log a fix plan in `.agent/ACTIVE_SKILLS.md`, then use `/design [full project | <section>]` (`shared-redesign-and-refactor`) and section skills to upgrade one section at a time (or across every section sequentially with `full project`).
 
 Run the quality gates (`.agent/rules/02-quality-gates.md`) before moving on.
 
