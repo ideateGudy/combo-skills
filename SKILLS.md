@@ -82,6 +82,7 @@ If nothing matches, state "no skill matched" and use the rules only.
 | shared-api-client | data layer | app talks to an HTTP API | no backend |
 | shared-state-management | state | cross-section client state or server cache | trivial local state |
 | shared-testing | verification | any section with logic, forms, flows | throwaway prototype |
+| shared-dsa-and-simplicity | architecture, search, caching, navigation, state, performance | choosing the simplest data structure/algorithm per section, avoiding $O(n^2)$ or over-engineering | trivial 1-to-1 CRUD |
 
 ## 4. Skill authoring rules
 - `SKILL.md` has frontmatter: `name`, `description`, `platform`, `sections`, `tags`, `requires`.

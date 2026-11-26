@@ -303,6 +303,28 @@
       "path": "skills/shared/shared-design-tokens"
     },
     {
+      "name": "shared-dsa-and-simplicity",
+      "platform": "shared",
+      "description": "Choose the simplest data structure and algorithm for each app section without over-engineering. Use when implementing search, caching, trees, queues, lookups, or data transforms. Not for trivial 1-to-1 CRUD.",
+      "sections": [
+        "architecture",
+        "search",
+        "caching",
+        "navigation",
+        "state",
+        "performance"
+      ],
+      "tags": [
+        "algorithms",
+        "data-structures",
+        "simplicity",
+        "yagni",
+        "complexity"
+      ],
+      "requires": [],
+      "path": "skills/shared/shared-dsa-and-simplicity"
+    },
+    {
       "name": "shared-state-management",
       "platform": "shared",
       "description": "Decide where state lives - server cache (TanStack Query), client state (Zustand), URL state and local component state. Use when state crosses sections or screens. Not for trivial local state.",
